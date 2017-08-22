@@ -1,0 +1,52 @@
+.background {
+  background-image: url('./img/mouse.png'); 
+  /* min-height: calc(100vh - 150px); */
+  min-height: 950px;
+  
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.saved-header .app-header-right  {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-right: 20%;
+  position: relative;
+
+}
+
+
+
+.sortAsc { 
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background: black;
+    border: none;
+    padding: 8px;
+    margin-top: 10px;
+}
+
+.sortDesc {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background: black;
+    border: none;
+    padding: 8px;
+    margin-top: 10px;
+   
+}
+
+   

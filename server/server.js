@@ -42,6 +42,7 @@ app.delete('/api/recipes/:id', (req, res) =>{
             return recipe
         }
     }) 
+    console.log(remainingRecipes);
     res.status(200).send(remainingRecipes);
 })
 
