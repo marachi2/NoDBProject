@@ -1,12 +1,12 @@
 {
   "name": "my",
-
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "axios": "^0.16.2",
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
+    "dotenv": "^4.0.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-router-dom": "^4.2.2",

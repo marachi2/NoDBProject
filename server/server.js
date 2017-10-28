@@ -1,11 +1,15 @@
+require('dotenv').config();
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const port = process.env.PORT;
 let recipes = require('./recipes.js')
 
 let app = express();
 app.use(bodyParser.json());
 app.use(cors());
+
 app.use(express.static(__dirname + './../build'));
 
 
@@ -54,7 +58,7 @@ app.get('*', (req, res) => {
 })
 
 
-app.listen(3030, () => {
-    console.log("Listening on port" + 3030)
+app.listen(port, () => {
+    console.log("Listening on port " + port)
 
 })
