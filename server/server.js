@@ -6,6 +6,8 @@ let recipes = require('./recipes.js')
 let app = express();
 app.use(bodyParser.json());
 app.use(cors());
+app.use(express.static(__dirname + './../build'));
+
 
 //Get All Recipes//
 app.get('/api/recipes', (req, res) => {
@@ -47,7 +49,9 @@ app.delete('/api/recipes/:id', (req, res) =>{
 })
 
 
-
+app.get('*', (req, res) => {
+    res.sendFile(__dirname + './../build');
+})
 
 
 app.listen(3030, () => {
