@@ -5,12 +5,20 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const port = process.env.PORT;
 let recipes = require('./recipes.js')
+const axios = require('axios')
 
 let app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-app.use(express.static(__dirname + './../build'));
+app.use(express.static(__dirname + '/../build'));
+
+app.get('/api/getAll', (req, res) =>{
+    axios.get('http://food2fork.com/api/search?key=' + process.env.REACT_APP_APIKEY + 
+    '&q=' + req.query.search).then(response =>{
+        res.status(200).send(response.data)
+    })
+})
 
 
 //Get All Recipes//
