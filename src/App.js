@@ -37,7 +37,7 @@ class App extends Component {
           richard: false
         })
         console.log(this.state.listofFood)
-      })
+      }).catch(err =>console.log(err))
     }
   }
   updateSearchBox(event) {
@@ -45,7 +45,7 @@ class App extends Component {
   }
   
   addRecipe(title, publisher, url, image, id) {
-    axios.post("http://localhost:3030/api/recipes", { title: title, publisher: publisher, url: url, image: image, id: id })
+    axios.post("/api/recipes", { title: title, publisher: publisher, url: url, image: image, id: id })
 
 
   }
